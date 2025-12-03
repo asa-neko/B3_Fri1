@@ -8,7 +8,7 @@ import io
 # 設定
 # ---------------------------------------------------------
 # 2014年〜2023年
-years = range(2014, 2024)
+years = range(2014, 2026)
 leagues = ['c', 'p']
 all_data = []
 
@@ -102,7 +102,7 @@ if len(all_data) > 0:
     final_df = final_df[priority_cols + other_cols]
 
     os.makedirs('data', exist_ok=True)
-    save_path = 'data/npb_data_final.csv'
+    save_path = 'data/data.csv'
     
     # ★ここが重要：Excel用の文字コードで保存
     final_df.to_csv(save_path, index=False, encoding='utf-8-sig')
